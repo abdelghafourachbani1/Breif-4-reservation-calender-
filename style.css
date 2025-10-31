@@ -212,3 +212,39 @@ button#saveform:hover {
     background-color: #669df6;
 }
 
+#btn-ajoute {
+    margin: 2rem auto;
+    width: auto;
+    padding: 12px 24px;
+    background-color: #8ab4f8;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#btn-ajoute:hover {
+    background-color: #669df6;
+}
+
+/* Blur */
+.blur {
+    display: block;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 99;
+}
+
+.blur-inactive {
+    display: none;
+}
+
