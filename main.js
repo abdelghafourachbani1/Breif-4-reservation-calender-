@@ -26,3 +26,15 @@ closeform.addEventListener("click", function () {
     selectday = null;
 });
 
+activeday.forEach(function (day) {
+    day.addEventListener("click", function () {
+        if (!day.classList.contains("inactive")) {
+            selectday = day.id;
+            tform.reset();
+            tform.style.display = "block";
+            pageblur.classList.remove("blur-inactive");
+            pageblur.classList.add("blur");
+        }
+    });
+});
+
