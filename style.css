@@ -32,3 +32,15 @@ body {
     margin: 0 auto;
 }
 
+.calendar-section h2 {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #8ab4f8;
+    font-weight: 500;
+}
+
+
+h1 i {
+    color: white;
+}
+
