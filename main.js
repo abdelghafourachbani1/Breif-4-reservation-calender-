@@ -19,3 +19,10 @@ ajoutebtn.addEventListener("click", function () {
     pageblur.classList.add("blur");
 });
 
+closeform.addEventListener("click", function () {
+    tform.style.display = "none";
+    pageblur.classList.remove("blur");
+    pageblur.classList.add("blur-inactive");
+    selectday = null;
+});
+
