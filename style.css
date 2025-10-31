@@ -184,3 +184,20 @@ h1 i {
     color: #fff;
 }
 
+input, select, button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #5f6368;
+    background-color: #3c4043;
+    color: #e8eaed;
+    font-size: 0.95rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #8ab4f8;
+    box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.3);
+}
+
