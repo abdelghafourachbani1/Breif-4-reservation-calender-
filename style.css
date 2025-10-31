@@ -131,3 +131,18 @@ h1 i {
     opacity: 1;
 }
 
+.reservation .btns button {
+    background: none;
+    border: none;
+    color: #9aa0a6;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.reservation .btns button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
