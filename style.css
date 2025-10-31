@@ -12,3 +12,23 @@ body {
     padding: 2rem 1rem;
 }
 
+.hero {
+    background-color: #669df6;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.desc {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
