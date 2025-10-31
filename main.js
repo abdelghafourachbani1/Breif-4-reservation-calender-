@@ -47,3 +47,26 @@ saveform.addEventListener("click", function (e) {
     let people = document.getElementById("people").value;
     let type = document.getElementById("type").value;
 
+    ////////////////////// form validation //////////////////////////
+
+    const nameregex = /^[A-Za-z\s]+$/;
+    if (!nameregex.test(uname)) {
+        alert("Nom incorrect (lettres seulement)");
+        return;
+    }
+
+    if (!start || !end) {
+        alert("Veuillez entrer les heures");
+        return;
+    }
+
+    if (people < 1 || people > 10) {
+        alert("1 à 10 personnes");
+        return;
+    }
+
+    if (!type) {
+        alert("Choisissez le type");
+        return;
+    }
+
