@@ -70,3 +70,22 @@ saveform.addEventListener("click", function (e) {
         return;
     }
 
+    ///////////////////// creat the element of resesrvation /////////////////
+
+    let creatreservation = document.createElement("div");
+    creatreservation.classList.add("reservation");
+    creatreservation.setAttribute("id", idcounter++);
+
+
+    creatreservation.innerHTML = `
+    <p>${uname} — ${start} - ${end} — ${people} pers — ${type}</p>
+    <div class="btns">
+        <button class="edit"><i class="fas fa-pen"></i></button>
+        <button class="delete"><i class="fas fa-trash"></i></button>
+    </div>`;
+
+    const colortype = {
+        VIP: "#ff5252",
+        Standard: "#4caf50",
+        Group: "#2196f3",
+    };
