@@ -167,7 +167,20 @@ h1 i {
     margin-bottom: 16px;
     font-weight: bold;
     color: #fff;
-    
+    text-align: center;
     font-size: 1.5rem;
+}
+
+#closeform {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    color: #9aa0a6;
+    cursor: pointer;
+}
+
+#closeform:hover {
+    color: #fff;
 }
 
