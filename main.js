@@ -113,4 +113,3 @@ saveform.addEventListener("click", function (e) {
         creatreservation.style.borderLeftColor = colortype[type];
         const sel = document.getElementById(selectday);
         sel.appendChild(creatreservation);
-
