@@ -146,3 +146,28 @@ h1 i {
     color: white;
 }
 
+/* Form */
+#resesrvationform {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2d2d2d;
+    padding: 24px;
+    width: 340px;
+    max-width: 90%;
+    border-radius: 16px;
+    border: 1px solid #3c4043;
+    color: #e8eaed;
+    z-index: 100;
+}
+
+#resesrvationform h2 {
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
