@@ -89,3 +89,28 @@ saveform.addEventListener("click", function (e) {
         Standard: "#4caf50",
         Group: "#2196f3",
     };
+
+    //  If editing, just update existing reservation
+    if (editingReservation) {
+        editingReservation.querySelector("p").textContent = `${uname} — ${start} - ${end} — ${people} pers — ${type}`;
+        editingReservation.style.borderLeftColor = colortype[type];
+
+        editingReservation = null; // reset edit mode
+    } else {
+        //  Otherwise create a new reservation
+        let creatreservation = document.createElement("div");
+        creatreservation.classList.add("reservation");
+        creatreservation.setAttribute("id", idcounter++);
+
+        creatreservation.innerHTML = `
+        <p>${uname} — ${start} - ${end} — ${people} pers — ${type}</p>
+        <div class="btns">
+            <button class="edit"><i class="fas fa-pen"></i></button>
+            <button class="delete"><i class="fas fa-trash"></i></button>
+        </div>
+        `;
+
+        creatreservation.style.borderLeftColor = colortype[type];
+        const sel = document.getElementById(selectday);
+        sel.appendChild(creatreservation);
+
