@@ -38,4 +38,12 @@ activeday.forEach(function (day) {
     });
 });
 //////////// save and check and change the form (reservation info) \\\\\\\\\\\\\\\\\\\\\\\\\ 
+saveform.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let uname = document.getElementById("name").value.trim();
+    let start = document.getElementById("start").value;
+    let end = document.getElementById("end").value;
+    let people = document.getElementById("people").value;
+    let type = document.getElementById("type").value;
 
