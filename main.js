@@ -113,3 +113,11 @@ saveform.addEventListener("click", function (e) {
         creatreservation.style.borderLeftColor = colortype[type];
         const sel = document.getElementById(selectday);
         sel.appendChild(creatreservation);
+
+
+        creatreservation.querySelector(".delete").addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (confirm("Supprimer cette reservation ?")) {
+                creatreservation.remove();
+            }
+        });
