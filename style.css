@@ -118,3 +118,16 @@ h1 i {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* Buttons */
+.reservation .btns {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.reservation:hover .btns {
+    opacity: 1;
+}
+
