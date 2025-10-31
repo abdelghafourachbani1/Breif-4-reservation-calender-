@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #e8eaed;
+    padding: 2rem 1rem;
+}
+
+.hero {
+    background-color: #669df6;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.desc {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.calendar-section h2 {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #8ab4f8;
+    font-weight: 500;
+}
+
+
+h1 i {
+    color: white;
+}
+
+/* Calendar Grid */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: .5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.day {
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    padding: 12px;
+    min-height: 140px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+    position: relative;
+    border: 1px solid #3c4043;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #353535;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.day h3 {
+    color: #9aa0a6;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+    .day.inactive {
+    background-color: #252525;
+    color: #5f6368;
+    cursor: not-allowed;
+    opacity: 0.6;
+    }
+
+.day.inactive:hover {
+    background-color: #252525;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .calendar { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 767px) {
+    .calendar { grid-template-columns: 1fr; }
+    #resesrvationform { width: 95%; }
+}
+/* Reservation Card */
+.reservation {
+    background-image: linear-gradient(135deg, #3c3c3c, #2d2d2d);
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.reservation:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+.reservation .btns {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.reservation:hover .btns {
+    opacity: 1;
+}
+
+.reservation .btns button {
+    background: none;
+    border: none;
+    color: #9aa0a6;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.reservation .btns button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Form */
+#resesrvationform {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2d2d2d;
+    padding: 24px;
+    width: 340px;
+    max-width: 90%;
+    border-radius: 16px;
+    border: 1px solid #3c4043;
+    color: #e8eaed;
+    z-index: 100;
+}
+
+#resesrvationform h2 {
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#closeform {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    color: #9aa0a6;
+    cursor: pointer;
+}
+
+#closeform:hover {
+    color: #fff;
+}
+
+input, select, button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #5f6368;
+    background-color: #3c4043;
+    color: #e8eaed;
+    font-size: 0.95rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #8ab4f8;
+    box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.3);
+}
+
+button#saveform {
+    background-color: #8ab4f8;
+    color: #1a1a1a;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+button#saveform:hover {
+    background-color: #669df6;
+}
+
+#btn-ajoute {
+    margin: 2rem auto;
+    width: auto;
+    padding: 12px 24px;
+    background-color: #8ab4f8;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#btn-ajoute:hover {
+    background-color: #669df6;
+}
+
+/* Blur */
+.blur {
+    display: block;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 99;
+}
+
+.blur-inactive {
+    display: none;
+}
+
+

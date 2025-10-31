@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation Restaurant _ Calendrier de Reservation en Ligne - SAFI</title>
+    <meta name="description"
+        content="Reservez votre table facilement avec notre calendrier interactif. VIP, Anniversaire, Groupe. Disponible 7j/7 et 24h/24. ACHBANI'S Restaurant SAFI" />
+    <meta name="keywords"
+        content="réservation restaurant, calendrier réservation, table restaurant Casablanca, réservation en ligne, restaurant VIP, anniversaire restaurant" />
+    <meta name="author" content="Abdelghafour Achbani" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+
+        <header class="hero">
+            <h1><i class="fas fa-calendar-alt"></i>Reserver votre table enligne</h1>
+            <p class="desc">choisisser votre jour, heure et type de reservation , VIP , Anniversaire, Group</p>
+        </header>
+
+        <section class="calendar-section">
+            <h2>Clendrie des reservation</h2>
+            <div class="calendar">
+                <div class="day" id="monday">
+                    <h3>monday</h3>
+                </div>
+                <div class="day" id="thusday">
+                    <h3>thusday</h3>
+                </div>
+                <div class="day" id="wednesday">
+                    <h3>wednesday</h3>
+                </div>
+                <div class="day" id="thursday">
+                    <h3>thursday</h3>
+                </div>
+                <div class="day" id="friday">
+                    <h3>friday</h3>
+                </div>
+                <div class="day inactive">
+                    <h3>saturday</h3>
+                </div>
+                <div class="day inactive">
+                    <h3>sunday</h3>
+                </div>
+                <div class="day" id="monday">
+                    <h3>monday</h3>
+                </div>
+                <div class="day" id="thusday">
+                    <h3>thusday</h3>
+                </div>
+                <div class="day" id="wednesday">
+                    <h3>wednesday</h3>
+                </div>
+                <div class="day" id="thursday">
+                    <h3>thursday</h3>
+                </div>
+                <div class="day" id="friday">
+                    <h3>friday</h3>
+                </div>
+                <div class="day inactive">
+                    <h3>saturday</h3>
+                </div>
+                <div class="day inactive">
+                    <h3>sunday</h3>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="blur-inactive">
+            <form id="resesrvationform">
+                <i id="closeform" class="fas fa-xmark"></i>
+                <h2>Add/Edit Reservation</h2>
+
+                <label>Name</label>
+                <input type="text" id="name" required />
+
+                <label>Start time</label>
+                <input type="time" id="start" required />
+
+                <label>End Time</label>
+                <input type="time" id="end" required />
+
+                <label>People</label>
+                <input type="number" id="people" min="1" max="10" required />
+
+                <label>Type</label>
+                <select id="type" required>
+                    <option value="">-- Select Type --</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="VIP">VIP</option>
+                </select>
+
+                <button type="submit" id="saveform">Save</button>
+            </form>
+        </div>
+
+        <button id="btn-ajoute">ajouter une reservation <i class="fas fa-plus"></i></button>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
